@@ -1,0 +1,10 @@
+project/
+├── public/
+│   ├── index.php       # Entry point
+│   └── .htaccess       # URL rewriting
+├── app/
+│   ├── Controllers/    # Request handling
+│   ├── Models/         # Data access & logic
+│   └── Views/          # HTML/Templates
+├── config/             # Database & app settings
+└── vendor/             # Composer dependencies   

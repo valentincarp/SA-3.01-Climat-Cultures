@@ -15,7 +15,7 @@ parametres = {
 }
 
 print("Envoi de la requête à l'API...")
-reponse = requests.get(url, params=parametres)
+reponse = requests.get(url, params=parametres) 
 
 if reponse.status_code == 200:
     donnees = reponse.json()
