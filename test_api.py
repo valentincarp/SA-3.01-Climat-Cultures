@@ -8,7 +8,7 @@ parametres = {
     "latitude": 43.60,
     "longitude": 1.44,
     "start_date": "2049-01-01",
-    "end_date": "2049-12-31",
+    "end_date": "2049-01-10",
     "models": "MRI_AGCM3_2_S",
     "daily": "temperature_2m_max,temperature_2m_min,precipitation_sum",
     "timezone": "Europe/Paris"
@@ -20,7 +20,7 @@ reponse = requests.get(url, params=parametres)
 if reponse.status_code == 200:
     donnees = reponse.json()
     print("Succès ! L'API répond bien.")
-    print("Dates récupérées :", donnees["daily"]["time"][:5])
-    print("T_max récupérées :", donnees["daily"]["temperature_2m_max"][:5])
+    print(reponse.url)
+    print(donnees)
 else:
     print(f"Erreur {reponse.status_code}: {reponse.text}")
